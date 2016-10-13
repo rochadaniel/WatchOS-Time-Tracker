@@ -65,6 +65,19 @@ class InterfaceController: WKInterfaceController {
         
         UserDefaults.standard.set(Date(), forKey: "clockedIn")
         UserDefaults.standard.synchronize()
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {(timer) in
+            if let clockedInDate = UserDefaults.standard.value(forKey: "clockedIn") as? Date {
+                let timeInterval = Int(Date().timeIntervalSince(clockedInDate))
+                print(timeInterval)
+                
+                let hours = timeInterval / 3600
+                let minutes = (timeInterval % 3600) / 60
+                let seconds = timeInterval % 60
+                
+                self.middleLabel.setText("\(hours)h \(minutes)m \(seconds)s")   
+            }
+        })
     }
     
     func clockOut() {
