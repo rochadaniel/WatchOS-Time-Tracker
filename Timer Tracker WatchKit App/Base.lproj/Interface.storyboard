@@ -27,7 +27,11 @@
                     </items>
                     <menu key="menu" id="noL-Pf-h5A">
                         <items>
-                            <menuItem title="History" icon="info" id="Bl2-3y-oCg"/>
+                            <menuItem title="History" icon="info" id="Bl2-3y-oCg">
+                                <connections>
+                                    <action selector="historyTapped" destination="AgC-eL-Hgc" id="iKz-Tq-srk"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Reset All" icon="trash" id="X6q-iY-iXY">
                                 <connections>
                                     <action selector="resetAllTapped" destination="AgC-eL-Hgc" id="t1r-cM-2su"/>
@@ -42,6 +46,17 @@
                     </connections>
                 </controller>
             </objects>
+        </scene>
+        <!--TimeTableController-->
+        <scene sceneID="QF2-YY-Hbc">
+            <objects>
+                <controller identifier="TimeTableController" id="8Fm-ac-mgH">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="Jxe-LF-Yif"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="256" y="-48"/>
         </scene>
     </scenes>
 </document>
