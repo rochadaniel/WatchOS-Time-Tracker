@@ -25,6 +25,16 @@
                             <fontDescription key="font" type="boldSystem" pointSize="40"/>
                         </label>
                     </items>
+                    <menu key="menu" id="noL-Pf-h5A">
+                        <items>
+                            <menuItem title="History" icon="info" id="Bl2-3y-oCg"/>
+                            <menuItem title="Reset All" icon="trash" id="X6q-iY-iXY">
+                                <connections>
+                                    <action selector="resetAllTapped" destination="AgC-eL-Hgc" id="t1r-cM-2su"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="button" destination="Uxo-oW-1Dy" id="U2v-rk-cHq"/>
                         <outlet property="middleLabel" destination="ZwH-4W-01f" id="JIB-sL-oRG"/>

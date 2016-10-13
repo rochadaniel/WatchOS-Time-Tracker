@@ -43,14 +43,14 @@ class InterfaceController: WKInterfaceController {
             topLabel.setHidden(false)
             self.topLabel.setText("Today: \(self.totalTimeWorkedAsString())")
             middleLabel.setText("0s")
-            button.setTitle("Clocked-Out")
+            button.setTitle("Clock-Out")
             button.setBackgroundColor(UIColor.red)
         } else {
             // THE UI FOR WHEN SOMEONE IS CLOCKED OUT
             
             topLabel.setHidden(true)
             middleLabel.setText("Today\n\(self.totalTimeWorkedAsString())")
-            button.setTitle("Clocked-In")
+            button.setTitle("Clock-In")
             button.setBackgroundColor(UIColor.green)
         }
     }
@@ -169,4 +169,15 @@ class InterfaceController: WKInterfaceController {
         
             return "\(totalHours)h \(totalMinutes)m"
     }
+    
+    @IBAction func resetAllTapped() {
+        UserDefaults.standard.set(nil, forKey: "clockedIn")
+         UserDefaults.standard.set(nil, forKey: "clockIns")
+        UserDefaults.standard.set(nil, forKey: "clockOuts")
+        
+        UserDefaults.standard.synchronize()
+        
+        updateUI(clockedIn: false)
+    }
+    
 }
