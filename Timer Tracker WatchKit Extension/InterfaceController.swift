@@ -70,7 +70,29 @@ class InterfaceController: WKInterfaceController {
     func clockOut() {
         clockedIn = false
         if let clockedInDate = UserDefaults.standard.value(forKey: "clockedIn") as? Date {
-            print(clockedInDate)
+            // Adding the clockin time to the clockIns array
+            if var clockIns = UserDefaults.standard.array(forKey: "clockIns") as? [Date] {
+                clockIns.insert(clockedInDate, at: 0)
+                UserDefaults.standard.set(clockIns, forKey: "clockIns")
+                print(clockIns)
+            } else {
+                //FIRST TIME
+                UserDefaults.standard.set([clockedInDate], forKey: "clockIns")
+            }
+            
+            // Adding the clockout time to the clockOuts array
+            if var clockOuts = UserDefaults.standard.array(forKey: "clockOuts") as? [Date] {
+                clockOuts.insert(Date(), at: 0)
+                UserDefaults.standard.set(clockOuts, forKey: "clockOuts")
+                print(clockOuts)
+            } else {
+                //FIRST TIME
+                UserDefaults.standard.set([Date()], forKey: "clockOuts")
+            }
+            
+            UserDefaults.standard.set(nil, forKey: "clockedIn")
         }
+        
+        UserDefaults.standard.synchronize()
     }
 }
