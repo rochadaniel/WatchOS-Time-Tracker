@@ -50,10 +50,19 @@
         <!--TimeTableController-->
         <scene sceneID="QF2-YY-Hbc">
             <objects>
-                <controller identifier="TimeTableController" id="8Fm-ac-mgH">
+                <controller identifier="TimeTableController" id="8Fm-ac-mgH" customClass="TimeTableInterfaceController" customModule="Timer_Tracker_WatchKit_Extension">
                     <items>
-                        <switch width="1" alignment="left" value="YES" title="Switch" id="Jxe-LF-Yif"/>
+                        <table alignment="left" id="3DJ-Kk-vbz">
+                            <items>
+                                <tableRow id="Dbb-cL-GKK">
+                                    <group key="rootItem" width="1" alignment="left" id="nLP-FD-mBb"/>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="3DJ-Kk-vbz" id="MJC-Xa-d4s"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="256" y="-48"/>

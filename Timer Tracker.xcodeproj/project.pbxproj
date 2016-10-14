@@ -19,6 +19,7 @@
 		B35D0ED21DAFC07000E8AD96 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35D0ED11DAFC07000E8AD96 /* InterfaceController.swift */; };
 		B35D0ED41DAFC07000E8AD96 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35D0ED31DAFC07000E8AD96 /* ExtensionDelegate.swift */; };
 		B35D0ED61DAFC07000E8AD96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35D0ED51DAFC07000E8AD96 /* Assets.xcassets */; };
+		B3ACF3EA1DB107FD006F07E2 /* TimeTableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACF3E91DB107FD006F07E2 /* TimeTableInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		B35D0ED31DAFC07000E8AD96 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		B35D0ED51DAFC07000E8AD96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B35D0ED71DAFC07000E8AD96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3ACF3E91DB107FD006F07E2 /* TimeTableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B35D0ED11DAFC07000E8AD96 /* InterfaceController.swift */,
+				B3ACF3E91DB107FD006F07E2 /* TimeTableInterfaceController.swift */,
 				B35D0ED31DAFC07000E8AD96 /* ExtensionDelegate.swift */,
 				B35D0ED51DAFC07000E8AD96 /* Assets.xcassets */,
 				B35D0ED71DAFC07000E8AD96 /* Info.plist */,
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B35D0ED41DAFC07000E8AD96 /* ExtensionDelegate.swift in Sources */,
+				B3ACF3EA1DB107FD006F07E2 /* TimeTableInterfaceController.swift in Sources */,
 				B35D0ED21DAFC07000E8AD96 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +555,7 @@
 				B35D0EDC1DAFC07000E8AD96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B35D0EDE1DAFC07000E8AD96 /* Build configuration list for PBXNativeTarget "Timer Tracker WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +564,7 @@
 				B35D0EE01DAFC07000E8AD96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B35D0EE21DAFC07000E8AD96 /* Build configuration list for PBXNativeTarget "Timer Tracker" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +573,7 @@
 				B35D0EE41DAFC07000E8AD96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
