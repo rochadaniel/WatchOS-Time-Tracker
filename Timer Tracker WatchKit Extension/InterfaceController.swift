@@ -18,17 +18,31 @@ class InterfaceController: WKInterfaceController {
     
     var clockedIn = false
     
+    var timer: Timer? = nil
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
     
         // Configure interface objects here.
-        updateUI(clockedIn: clockedIn)
     
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+        //super.willActivate()
+        if UserDefaults.standard.value(forKey: "clockedIn") != nil {
+            
+            if timer == nil {
+                startUpTimer()
+            }
+            clockedIn = true
+            updateUI(clockedIn: true)
+        } else {
+            
+            clockedIn = false
+            updateUI(clockedIn: false)
+            
+        }
     }
     
     override func didDeactivate() {
@@ -70,7 +84,11 @@ class InterfaceController: WKInterfaceController {
         UserDefaults.standard.set(Date(), forKey: "clockedIn")
         UserDefaults.standard.synchronize()
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {(timer) in
+        startUpTimer()
+    }
+    
+    func startUpTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {(timer) in
             if let clockedInDate = UserDefaults.standard.value(forKey: "clockedIn") as? Date {
                 
                 let timeInterval = Int(Date().timeIntervalSince(clockedInDate))
@@ -92,7 +110,7 @@ class InterfaceController: WKInterfaceController {
                 currentClockedInString += " \(seconds)s"
                 
                 self.middleLabel.setText(currentClockedInString)
-            
+                
                 self.topLabel.setText("Today: \(self.totalTimeWorkedAsString())")
             }
         })
@@ -100,6 +118,10 @@ class InterfaceController: WKInterfaceController {
     
     func clockOut() {
         clockedIn = false
+        
+        timer?.invalidate()
+        timer = nil
+        
         if let clockedInDate = UserDefaults.standard.value(forKey: "clockedIn") as? Date {
             // Adding the clockin time to the clockIns array
             if var clockIns = UserDefaults.standard.array(forKey: "clockIns") as? [Date] {

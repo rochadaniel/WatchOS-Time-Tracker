@@ -23,8 +23,11 @@ class DetailInterfaceController: WKInterfaceController {
             let clockIn = dates[0]
             let clockOut = dates[1]
             
-            clockInLabel.setText(clockIn.description)
-            clockOutLabel.setText(clockOut.description)
+            var formatter = DateFormatter()
+            formatter.dateFormat = "MM-dd-yyyy HH:mm"
+            
+            clockInLabel.setText(formatter.string(from: clockIn))
+            clockOutLabel.setText(formatter.string(from: clockOut))
         }
         
     }
