@@ -20,6 +20,8 @@
 		B35D0ED41DAFC07000E8AD96 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35D0ED31DAFC07000E8AD96 /* ExtensionDelegate.swift */; };
 		B35D0ED61DAFC07000E8AD96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35D0ED51DAFC07000E8AD96 /* Assets.xcassets */; };
 		B3ACF3EA1DB107FD006F07E2 /* TimeTableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACF3E91DB107FD006F07E2 /* TimeTableInterfaceController.swift */; };
+		B3ACF3EC1DB15BC2006F07E2 /* ClockInOutRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACF3EB1DB15BC2006F07E2 /* ClockInOutRowController.swift */; };
+		B3ACF3EE1DB1616C006F07E2 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACF3ED1DB1616C006F07E2 /* DetailInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		B35D0ED51DAFC07000E8AD96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B35D0ED71DAFC07000E8AD96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3ACF3E91DB107FD006F07E2 /* TimeTableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableInterfaceController.swift; sourceTree = "<group>"; };
+		B3ACF3EB1DB15BC2006F07E2 /* ClockInOutRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockInOutRowController.swift; sourceTree = "<group>"; };
+		B3ACF3ED1DB1616C006F07E2 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,9 +154,11 @@
 			children = (
 				B35D0ED11DAFC07000E8AD96 /* InterfaceController.swift */,
 				B3ACF3E91DB107FD006F07E2 /* TimeTableInterfaceController.swift */,
+				B3ACF3EB1DB15BC2006F07E2 /* ClockInOutRowController.swift */,
 				B35D0ED31DAFC07000E8AD96 /* ExtensionDelegate.swift */,
 				B35D0ED51DAFC07000E8AD96 /* Assets.xcassets */,
 				B35D0ED71DAFC07000E8AD96 /* Info.plist */,
+				B3ACF3ED1DB1616C006F07E2 /* DetailInterfaceController.swift */,
 			);
 			path = "Timer Tracker WatchKit Extension";
 			sourceTree = "<group>";
@@ -305,6 +311,8 @@
 				B35D0ED41DAFC07000E8AD96 /* ExtensionDelegate.swift in Sources */,
 				B3ACF3EA1DB107FD006F07E2 /* TimeTableInterfaceController.swift in Sources */,
 				B35D0ED21DAFC07000E8AD96 /* InterfaceController.swift in Sources */,
+				B3ACF3EC1DB15BC2006F07E2 /* ClockInOutRowController.swift in Sources */,
+				B3ACF3EE1DB1616C006F07E2 /* DetailInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -54,8 +54,17 @@
                     <items>
                         <table alignment="left" id="3DJ-Kk-vbz">
                             <items>
-                                <tableRow id="Dbb-cL-GKK">
-                                    <group key="rootItem" width="1" alignment="left" id="nLP-FD-mBb"/>
+                                <tableRow identifier="clockInOutRow" id="Dbb-cL-GKK" customClass="ClockInOutRowController" customModule="Timer_Tracker_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="nLP-FD-mBb">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" id="Rtf-xa-ter">
+                                                <fontDescription key="font" type="system" pointSize="22"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="Rtf-xa-ter" id="U65-4r-ak8"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
@@ -65,7 +74,25 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="256" y="-48"/>
+            <point key="canvasLocation" x="261" y="48"/>
+        </scene>
+        <!--TimeDetail-->
+        <scene sceneID="ACQ-MT-E2q">
+            <objects>
+                <controller identifier="TimeDetail" id="HtM-DH-TBE" customClass="DetailInterfaceController" customModule="Timer_Tracker_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Clock-In" id="pdS-zp-GdL"/>
+                        <label alignment="left" text="May 5th 12:08am" id="cBi-vq-aWg"/>
+                        <label alignment="left" text="Clock-Out" id="c83-Es-O1O"/>
+                        <label alignment="left" text="May 5th 12:20am" id="9dk-oP-Chh"/>
+                    </items>
+                    <connections>
+                        <outlet property="clockInLabel" destination="cBi-vq-aWg" id="ilT-vA-UDn"/>
+                        <outlet property="clockOutLabel" destination="9dk-oP-Chh" id="MKr-n7-ao7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="486" y="48"/>
         </scene>
     </scenes>
 </document>

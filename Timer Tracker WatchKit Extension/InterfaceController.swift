@@ -165,7 +165,7 @@ class InterfaceController: WKInterfaceController {
             
             let totalHours = totalTimeInterval / 3600
             let totalMinutes = (totalTimeInterval % 3600) / 60
-            let totalSeconds = totalTimeInterval % 60
+            //let totalSeconds = totalTimeInterval % 60
         
             return "\(totalHours)h \(totalMinutes)m"
     }
